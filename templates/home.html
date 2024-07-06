@@ -6,6 +6,10 @@
     <h1>Este es el home</h1>
     {% if user.is_authenticated %}
         <p>Epale {{ user.email }} </p>
+        <form action="{% url 'logout' %}" method="post">
+            {% csrf_token %}
+            <button type="submit">Log Out</button>
+        </form>
     {% else %}
         <p>No estas registrado</p>
         <a href="{% url 'login' %}">Log In</a>
