@@ -4,17 +4,6 @@
 {% load static %}
 
 {% block content %}
-    <h1>Este es el home</h1>
-    <img class="bookcover" src="{% static 'images/Canata.png' %}" alt="Maloooooooo">
-    {% if user.is_authenticated %}
-        <p>Epale {{ user.email }} </p>
-        <form action="{% url 'logout' %}" method="post">
-            {% csrf_token %}
-            <button type="submit">Log Out</button>
-        </form>
-    {% else %}
-        <p>No estas registrado</p>
-        <a href="{% url 'login' %}">Log In</a>
-        <a href="{% url 'signup' %}">Sign Up</a>
-    {% endif %}
+    <h1> Home :)</h1>
+    <img class="bookcover" src="{% static 'images/Canata.png' %}" alt="help">
 {% endblock content %}
